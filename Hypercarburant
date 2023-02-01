@@ -1,0 +1,9 @@
+def liters_per_kilometer(distance, fuel_consumed):
+  return fuel_consumed / distance
+  
+distance = float(input("Entrez la distance parcourue en kilomètres: "))
+fuel_consumed = float(input("Entrez la quantité hypercarburant consommée en litres: "))
+
+result = liters_per_kilometer(distance, fuel_consumed)
+
+print("Le nombre de litres hypercarburant consommés par kilomètre est de : ", result)
