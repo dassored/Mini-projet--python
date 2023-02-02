@@ -1,0 +1,12 @@
+username = "Niky"
+password = "sodrjsfqaynp"
+
+input_username = input("Entrez votre nom d'utilisateur : ")
+input_password = input("Entrez votre mot de passe : ")
+
+if len(input_password) < 8:
+    print("Le mot de passe doit comporter au moins 8 caractères.")
+elif input_username == username and input_password == password:
+    print("Identification réussie !")
+else:
+    print("Échec de l'identification. Veuillez réessayer.")
