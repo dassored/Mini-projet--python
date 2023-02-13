@@ -1,0 +1,16 @@
+def est_premier (n):
+    if n <= 1:
+        return False
+    for i in range (2, n):
+         if n % i == 0:
+            return False
+    return True
+
+def nombres_premiers(debut, fin):
+    premiers = []
+    for n in range (debut, fin + 1):
+        if est_premier(n):
+            premiers.append(n)
+    return premiers
+            
+print(nombres_premiers(2, 20)) # [2, 3, 5, 7, 11, 13, 17, 19]
