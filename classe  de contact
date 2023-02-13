@@ -1,0 +1,6 @@
+def sort_contacts (contacts):
+    return sorted(contacts, key=lambda x: (x[0], x[1]))
+  
+  
+contacts = [("david basset", "555-555-5555"), ( "Eric Dooe", "555-555-5556"), ("Bobee Smith", "555-555-5557"), ("Marie Johnson", "555-555-5558")]
+print(sort_contacts(contacts))
