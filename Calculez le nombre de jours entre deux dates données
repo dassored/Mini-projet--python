@@ -1,0 +1,12 @@
+#Calculez le nombre de jours entre deux dates données
+
+from datetime import datetime, timedelta
+
+def nombre_de_jours (date1, date2):
+    date1 = datetime.strptime (date1, '%Y-%m-%d')
+    date2 = datetime.strptime (date2, '%Y-%m-%d')
+    delta = date2 - date1
+    return delta.days
+
+print(nombre_de_jours('2022-01-01', '2022-01-15')) # 14
+print(nombre_de_jours('2022-01-01', '2022-02-01')) # 31)
