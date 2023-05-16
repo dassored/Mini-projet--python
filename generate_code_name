@@ -1,0 +1,16 @@
+def generate_code_name(first_name, last_name):
+    wowels = 'AEIOU'
+    code_name = ''
+    for char in first_name:
+        code_name +=char.upper()
+code_name +=''
+for char in last_name:
+    if char.upper( )in vowels:
+        code_name += char.upper()
+        return code_name
+
+        first_name = "james"
+        last_name = "Bond"
+
+        code_name = generate_code_name(first_name, last_name)
+        print (f"Votre nom de code est : {code_name}")
