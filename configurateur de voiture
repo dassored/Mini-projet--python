@@ -1,0 +1,49 @@
+import random
+
+# Options et prix prédéfinis pour la BMW Série 7
+options = {
+    "Modèle": ["740i", "750i", "M760i"],
+    "Couleur": ["Noir", "Blanc", "Gris", "Bleu"],
+    "Intérieur": ["Cuir noir", "Cuir beige", "Cuir brun"],
+    "Jantes": ["18 pouces", "19 pouces", "20 pouces"],
+}
+
+prix_options = {
+    "740i": 80000,
+    "750i": 95000,
+    "M760i": 120000,
+    "Noir": 0,
+    "Blanc": 1000,
+    "Gris": 500,
+    "Bleu": 1500,
+    "Cuir noir": 0,
+    "Cuir beige": 2000,
+    "Cuir brun": 2500,
+    "18 pouces": 0,
+    "19 pouces": 1000,
+    "20 pouces": 2000,
+}
+
+# Fonction pour configurer la BMW Série 7
+def configurer_bmw_serie7(prix_max):
+    config = {}
+    prix_total = 0
+    
+    for option, valeurs in options.items():
+        choix = random.choice(valeurs)
+        config[option] = choix
+        prix_total += prix_options[choix]
+        
+    if prix_total <= prix_max:
+        print("Configuration de la BMW Série 7 :")
+        for option, valeur in config.items():
+            print(option + ":", valeur)
+        print("Prix total :", prix_total)
+    else:
+        print("Impossible de configurer la BMW Série 7 dans la limite de prix donnée.")
+
+# Prix maximal pour la configuration de la BMW Série 7
+prix_maximal = 100000
+
+# Configuration de la BMW Série 7
+configurer_bmw_serie7(prix_maximal)
