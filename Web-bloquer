@@ -1,0 +1,13 @@
+def bloquer_site_web(site_web):
+    try:
+        with open(r"C:\Windows\System32\drivers\etc\hosts", "a") as hosts_file:
+            hosts_file.write(f"127.0.0.1 {site_web}\n")
+        print(f"Le site {site_web} a été bloqué avec succès.")
+    except IOError as e:
+        print(f"Erreur lors de la tentative de blocage du site {site_web} :", e)
+
+# Site web à bloquer
+site_web = "www.francebleu.fr"
+
+# Appel de la fonction pour bloquer le site web
+bloquer_site_web(site_web)
