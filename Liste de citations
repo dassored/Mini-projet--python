@@ -1,0 +1,20 @@
+import random
+
+# Liste de citations ou de faits intéressants
+quotes = [
+    "La vie est soit une aventure audacieuse, soit rien du tout. - Helen Keller",
+    "Le succès, c'est tomber sept fois et se relever huit. - Proverbe japonais",
+    "Le meilleur moment pour planter un arbre était il y a 20 ans. Le deuxième meilleur moment est maintenant. - Proverbe chinois",
+    "Le succès n'est pas la clé du bonheur. Le bonheur est la clé du succès. Si vous aimez ce que vous faites, vous réussirez. - Albert Schweitzer",
+    "Ne laissez pas le bruit des opinions des autres étouffer votre voix intérieure. - Steve Jobs",
+    "La créativité, c'est l'intelligence qui s'amuse. - Albert Einstein",
+    "La seule façon de faire du bon travail est d'aimer ce que vous faites. - Steve Jobs"
+]
+
+# Fonction pour afficher une citation ou un fait aléatoire
+def display_random_quote():
+    random_quote = random.choice(quotes)
+    print(random_quote)
+
+# Exécution du script
+display_random_quote()
